@@ -16,4 +16,4 @@ Once finished, any Dropbox-related files or directories will appear in the "Blac
 ![sidebar](https://user-images.githubusercontent.com/18340851/47053781-4b4a7480-d1fa-11e8-8092-1914dc1792c4.png)
 
 ## References
-This project was aided by the work of [Francesco Picasso](http://blog.digital-forensics.it/2017/04/brush-up-on-dropbox-dbx-decryption.html?m=1) et. al., and utilises the tools available at [drfirfpi/decwindbx](https://github.com/dfirfpi/decwindbx)
+This project was aided by the work of [Francesco Picasso](http://blog.digital-forensics.it/2017/04/brush-up-on-dropbox-dbx-decryption.html?m=1) et. al., and utilises the tools available at [drfirfpi/decwindbx](https://github.com/dfirfpi/decwindbx).
