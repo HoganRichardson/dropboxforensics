@@ -12,6 +12,7 @@ This is a Python Module for Autopsy, and can be installed by downloading the con
 Then, in Autopsy, navigate to Tools > Run Injest Modules > (select image). The "Dropbox Injest Module with UI" should appear in the list. Selecting it will show two checkboxes where you can choose to look for files and/or directories relating to Dropbox installations. Click "Finish" to run the modules. 
 
 Once finished, any Dropbox-related files or directories will appear in the "Blackboard" (sidebar) under Interesting Items > Dropbox > Interesting Files.
+
 ![sidebar](https://user-images.githubusercontent.com/18340851/47053781-4b4a7480-d1fa-11e8-8092-1914dc1792c4.png)
 
 ## References
