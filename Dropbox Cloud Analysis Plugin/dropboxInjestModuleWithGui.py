@@ -1,9 +1,3 @@
-# Sample module in the public domain. Feel free to use this as a template
-# for your modules (and you can remove this header and take complete credit
-# and liability)
-#
-# Contact: Brian Carrier [carrier <at> sleuthkit [dot] org]
-#
 # This is free and unencumbered software released into the public domain.
 #
 # Anyone is free to copy, modify, publish, use, compile, sell, or
@@ -27,16 +21,11 @@
 # ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
 
-
+#
 # Ingest module for Autopsy with GUI
 #
-# Difference between other modules in this folder is that it has a GUI
-# for user options.  This is not needed for very basic modules. If you
-# don't need a configuration UI, start with the other sample module.
-#
-# Search for TODO for the things that you need to change
-# See http://sleuthkit.org/autopsy/docs/api-docs/4.6.0/index.html for documentation
-
+# Developed from a base template provided at https://github.com/sleuthkit/autopsy/tree/develop/pythonExamples
+# 
 
 import jarray
 import inspect
@@ -82,7 +71,6 @@ class DropboxInjestWithUIFactory(IngestModuleFactoryAdapter):
     def getDefaultIngestJobSettings(self):
         return DropboxInjestWithUISettings()
 
-    # TODO: Keep enabled only if you need ingest job-specific settings UI
     def hasIngestJobSettingsPanel(self):
         return True
 
@@ -113,7 +101,6 @@ class DropboxInjestWithUI(FileIngestModule):
         self.local_settings = settings
 
     # Where any setup and configuration is done
-    # TODO: Add any setup code that you need here.
     def startUp(self, context):
         # As an example, determine if user configured a flag in UI
         if self.local_settings.getFileFlag():
@@ -130,7 +117,6 @@ class DropboxInjestWithUI(FileIngestModule):
         pass
 
     # Where the analysis is done.  Each file will be passed into here.
-    # TODO: Add your analysis code in here.
     def process(self, file):
         # See code in pythonExamples/fileIngestModule.py for example code
        
@@ -215,7 +201,6 @@ class DropboxInjestWithUI(FileIngestModule):
         return IngestModule.ProcessResult.OK
 
     # Where any shutdown code is run and resources are freed.
-    # TODO: Add any shutdown code that you need here.
     def shutDown(self):
         pass
 
@@ -257,13 +242,11 @@ class DropboxInjestWithUISettingsPanel(IngestModuleIngestJobSettingsPanel):
 
     # We get passed in a previous version of the settings so that we can
     # prepopulate the UI
-    # TODO: Update this for your UI
     def __init__(self, settings):
         self.local_settings = settings
         self.initComponents()
         self.customizeComponents()
 
-    # TODO: Update this for your UI
     def checkBoxEvent(self, event):
         if self.file_checkbox.isSelected():
             self.local_settings.setFileFlag(True)
@@ -275,7 +258,6 @@ class DropboxInjestWithUISettingsPanel(IngestModuleIngestJobSettingsPanel):
         else:
             self.local_settings.setDirFlag(False)
 
-    # TODO: Update this for your UI
     def initComponents(self):
         self.setLayout(BoxLayout(self, BoxLayout.Y_AXIS))
         self.file_checkbox = JCheckBox("Look for Files relating to Dropbox", actionPerformed=self.checkBoxEvent)
@@ -284,7 +266,6 @@ class DropboxInjestWithUISettingsPanel(IngestModuleIngestJobSettingsPanel):
         self.dir_checkbox = JCheckBox("Look for Directories relating to Dropbox", actionPerformed=self.checkBoxEvent)
         self.add(self.dir_checkbox)
 
-    # TODO: Update this for your UI
     def customizeComponents(self):
         self.file_checkbox.setSelected(self.local_settings.getFileFlag())
         self.dir_checkbox.setSelected(self.local_settings.getDirFlag())
