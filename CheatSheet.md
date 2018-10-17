@@ -7,14 +7,14 @@
   * [Configuration Files](#configuration-files)
   * [Registry Keys](#registry-keys)
   * [Synchronised Files](#synchronised-files)
-  * [Cached & Deleted Files](#cached--deleted-files)
+  * [Cache & Deleted Files](#cache--deleted-files)
 * [Interpreting Dropbox Configuration Files](#interpreting-dropbox-configuration-files)
-  * [info.json](#info.json)
-  * [Decrypting *.dbx Files](#)
-  * [config.dbx](#)
-  * [filecache.dbx](#)
-  * [deleted.dbx](#)
-* [An Approach to Dropbox Analysis](an-approach-to-dropbox-analysis)
+  * [info.json](#infojson)
+  * [Decrypting *.dbx Files](#decrypting-dbx-files)
+  * [config.dbx](#configdbx)
+  * [filecache.dbx](#filecachedbx)
+  * [deleted.dbx](#deleteddbx)
+* [An Approach to Dropbox Analysis](#an-approach-to-dropbox-analysis)
 ---
 ## Dropbox File Structure
 ### Configuration Files
